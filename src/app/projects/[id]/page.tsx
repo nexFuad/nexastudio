@@ -38,7 +38,7 @@ export default async function ProjectDetailsPage({ params }: { params: Promise<{
               {project.summary}
             </p>
           </div>
-          <div className="relative mt-14 aspect-[16/8] overflow-hidden rounded-3xl">
+          <div className="relative mt-14 aspect-16/8 overflow-hidden rounded-3xl">
             <Image
               src={project.image}
               alt={`${project.title} project`}

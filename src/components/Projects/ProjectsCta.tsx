@@ -8,7 +8,7 @@ export default function ProjectsCta() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#bcd9cf]">
             Your project
           </p>
-          <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-6xl">
+          <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tighter sm:text-6xl">
             Let&apos;s make the next project the one people remember.
           </h2>
         </div>

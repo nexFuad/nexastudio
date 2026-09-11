@@ -1,11 +1,9 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { projectsData } from "@/Data/projectsData";
 
-const projects = [
-  { title: "Northline", type: "Architecture & interiors", color: "from-[#dcece5] to-[#aac9ba]" },
-  { title: "Aster & Co.", type: "Modern lifestyle brand", color: "from-[#f1e8dc] to-[#d5baa3]" },
-  { title: "Morrow", type: "Sustainable food company", color: "from-[#dce8ee] to-[#a9c2ce]" },
-];
+const selectedProjects = projectsData.slice(0, 3);
 
 export default function Projects() {
   return (
@@ -16,14 +14,28 @@ export default function Projects() {
           Digital spaces made for real-world growth.
         </h2>
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
-          {projects.map((project) => (
-            <Link key={project.title} href="/projects" className="group block">
-              <div
-                className={`flex aspect-4/3 items-end rounded-2xl bg-linear-to-br p-6 ${project.color} transition-transform duration-300 group-hover:-translate-y-2`}
-              >
-                <div className="rounded-xl bg-white/80 px-4 py-3 backdrop-blur">
+          {selectedProjects.map((project) => (
+            <Link key={project.id} href={`/projects/${project.id}`} className="group block">
+              <div className="relative aspect-4/3 overflow-hidden rounded-2xl">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} project`}
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-linear-to-t from-slate-950/55 via-slate-950/5 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-6">
+                  <div>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white/80">
+                      {project.category}
+                    </p>
+                    <p className="mt-2 text-lg font-semibold text-white">{project.title}</p>
+                  </div>
+                  <span className="text-xs font-medium text-white/80">{project.year}</span>
+                </div>
+                <div className="sr-only">
                   <p className="font-semibold text-slate-800">{project.title}</p>
-                  <p className="mt-1 text-xs text-slate-600">{project.type}</p>
                 </div>
               </div>
             </Link>

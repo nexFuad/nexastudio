@@ -46,10 +46,10 @@ export default function ProjectsShowcase() {
               <Link
                 key={project.id}
                 href={`/projects/${project.id}`}
-                className="group grid overflow-hidden border-y border-[#b7d1c7] transition-all duration-300 hover:border-[#709b8e] lg:min-h-[30rem] lg:grid-cols-[0.95fr_1.05fr]"
+                className="group grid overflow-hidden border-y border-[#b7d1c7] transition-all duration-300 hover:border-[#709b8e] lg:min-h-120 lg:grid-cols-[0.95fr_1.05fr]"
               >
                 <div
-                  className={`relative aspect-[16/10] overflow-hidden lg:aspect-auto lg:min-h-[30rem] ${isReversed ? "lg:order-2" : ""}`}
+                  className={`relative aspect-16/10 overflow-hidden lg:aspect-auto lg:min-h-120 ${isReversed ? "lg:order-2" : ""}`}
                 >
                   <Image
                     src={project.image}
