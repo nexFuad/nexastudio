@@ -1,3 +1,15 @@
+import ContactFaq from "@/components/Contact/ContactFaq";
+import ContactForm from "@/components/Contact/ContactForm";
+import ContactHero from "@/components/Contact/ContactHero";
+import ContactMap from "@/components/Contact/ContactMap";
+
 export default function ContactPage() {
-  return <h1>Contact Page</h1>;
+  return (
+    <>
+      <ContactHero />
+      <ContactForm />
+      <ContactMap />
+      <ContactFaq />
+    </>
+  );
 }

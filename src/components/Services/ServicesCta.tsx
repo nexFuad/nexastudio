@@ -9,7 +9,7 @@ export default function ServicesCta() {
           <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#bcd9cf]">
             Your next project
           </p>
-          <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-[-0.05em] sm:text-6xl">
+          <h2 className="mt-5 max-w-3xl text-4xl font-semibold leading-[1.05] tracking-tighter sm:text-6xl">
             Need a website that is ready for what comes next?
           </h2>
         </div>
